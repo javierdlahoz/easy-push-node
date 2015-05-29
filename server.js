@@ -1,9 +1,7 @@
 var express=require('express');
 var path = require('path');
 var shell = require('./helpers/shellHelper');
-var bodyParser = require('body-parser')
-
-shell.shellHelper.whoami();
+var bodyParser = require('body-parser');
 
 var app=express();
 app.use(bodyParser.urlencoded({ extended: false }));

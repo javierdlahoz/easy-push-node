@@ -5,6 +5,7 @@
 		"marshallmoya": "marshallmoya.sh",
 		"sfa": "sfa.sh",
 		"The Connectory": "ngc.sh",
-		"easy-push": "easy-push.sh" 
+		"easy-push": "easy-push.sh",
+		"easy-push (node)": "easy-push-node.sh"
 	}
 }
