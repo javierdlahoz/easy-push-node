@@ -1,0 +1,10 @@
+{
+	"projects": {
+		"insites": "insites.sh",
+		"ispg": "isgp.sh",
+		"marshallmoya": "marshallmoya.sh",
+		"sfa": "sfa.sh",
+		"The Connectory": "ngc.sh",
+		"easy-push": "easy-push.sh" 
+	}
+}

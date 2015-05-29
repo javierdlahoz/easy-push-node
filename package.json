@@ -1,0 +1,27 @@
+{
+  "name": "easy-push-node",
+  "version": "1.0.0",
+  "description": "My first node work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javierdlahoz/easy-push-innd.git"
+  },
+  "author": "Javier De la Hoz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javierdlahoz/easy-push-innd/issues"
+  },
+  "homepage": "https://github.com/javierdlahoz/easy-push-innd",
+  "bin": {
+    "easy-push-node": "FileHelper.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "ejs": "^2.3.1",
+    "express": "^4.12.4"
+  }
+}
