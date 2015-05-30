@@ -19,6 +19,12 @@ module.exports=function(app)
 		});
 	});
 
+	app.post('/api/projects/delete', function(req, res){
+		console.log("deleting object with id = " + req.body.id);
+		ProjectController.delete(req.body.id);
+		res.send({message: "success"});
+	});
+
 	app.post('/api/projects/save', function(req, res){
 		console.log("saving object...");
 		console.log(req.body);

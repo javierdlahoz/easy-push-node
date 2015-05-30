@@ -4,12 +4,12 @@ angular.module('easy-push', [])
 
 function getUrls(){
 	return {
-
 		//for projects
 		projects: "data/projects.json",
 		push: "api/shell",
 		newProject: "api/projects/save",
-		getAllProjects: "api/projects"
+		getAllProjects: "api/projects",
+		deleteProject: "api/projects/delete",
 	};
 }
 

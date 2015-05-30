@@ -41,5 +41,15 @@ angular.module('easy-push')
                 $scope.projects = data.projects;
             }); 
         };
+
+        $scope.delete = function(id){
+            var formData = {
+                id: id
+            };
+
+            PushService.delete(formData, function(){
+                $scope.getAllProjects();
+            });
+        };
     }
 );

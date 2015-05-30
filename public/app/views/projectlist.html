@@ -9,8 +9,11 @@
         <tr ng-repeat="project in projects">
             <td>{{project.name}}</td>
             <td>
-                <button class="btn btn-success" ng-click="pushAProject(project.ip)" style="width: 100%;">
+                <button class="btn btn-success" ng-click="pushAProject(project.ip)" style="width: 70%;">
                     Push
+                </button>
+                <button class="btn btn-danger" ng-click="delete(project._id)" style="width: 20%;">
+                    x
                 </button>
             </td>
         </tr>
