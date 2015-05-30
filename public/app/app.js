@@ -8,6 +8,8 @@ function getUrls(){
 		//for projects
 		projects: "data/projects.json",
 		push: "api/shell",
+		newProject: "api/projects/save",
+		getAllProjects: "api/projects"
 	};
 }
 

@@ -1,0 +1,26 @@
+<table class="table table-striped" ng-init="getAllProjects();">
+    <thead>
+        <tr>
+            <th>Project</th>
+            <th><center>Action</center></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="project in projects">
+            <td>{{project.name}}</td>
+            <td>
+                <button class="btn btn-success" ng-click="pushAProject(project.ip)" style="width: 100%;">
+                    Push
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<div ng-hide="loading === null">
+    <h3>Output</h3>
+    <pre><span ng-show="loading === false">{{output}}</span>
+        <span ng-show="loading === true">Loading...</span>
+    </pre>
+</div>

@@ -8,32 +8,19 @@
         
         <div ng-app="easy-push">
             <div ng-controller="PushController">
-                <table class="table table-striped" ng-init="getProjects();">
-                    <thead>
-                        <tr>
-                            <th>Project</th>
-                            <th><center>Action</center></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="(projectName, projectValue) in projects">
-                            <td>{{projectName}}</td>
-                            <td>
-                                <button class="btn btn-success" ng-click="pushAProject(projectValue)" style="width: 100%;">
-                                    Push
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <ul class="nav nav-tabs">
+                    <li role="presentation" ng-class="{active: tab == 'projects'}"><a href="#" ng-click="tab='projects'">Projects</a></li>
+                    <li role="presentation" ng-class="{active: tab == 'create'}"><a href="#" ng-click="tab='create'">Create a project</a></li>
+                </ul>
                 
-                <br>
-                <div ng-hide="loading === null">
-                    <h3>Output</h3>
-                    <pre><span ng-show="loading === false">{{output}}</span>
-                        <span ng-show="loading === true">Loading...</span>
-                    </pre>
+                <div ng-show="tab=='projects'">
+                    <project-list></project-list>
+                </div>   
+
+                <div ng-show="tab == 'create'">
+                    <new-project></new-project>
                 </div>
+
             </div>
         </div>
     </body>
@@ -43,4 +30,5 @@
     <script src="app/app.js"></script>
     <script src="app/controllers/PushController.js"></script>
     <script src="app/services/PushService.js"></script>
+    <script src="app/directives/projectlistDirective.js"></script>
 </html>

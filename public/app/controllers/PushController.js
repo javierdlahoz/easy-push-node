@@ -3,6 +3,7 @@ angular.module('easy-push')
 
     	$scope.output = "";
     	$scope.loading = null;
+        $scope.tab = "projects";
     	
     	$scope.getProjects = function(){
     		PushService.getProjects(function(data){
@@ -10,10 +11,10 @@ angular.module('easy-push')
     		});
     	};
     	
-    	$scope.pushAProject = function(projectValue){
+    	$scope.pushAProject = function(ip){
     		$scope.loading = true;
     		formData = {
-    			file: projectValue
+    			ip: ip
     		};
     		
     		PushService.pushProject(formData, function(data){
@@ -21,5 +22,24 @@ angular.module('easy-push')
     			$scope.output = data.message;
     		});
     	};
+
+        $scope.newProject = function(){
+            formData = {
+                name: $scope.name,
+                ip: $scope.ip,
+                version: $scope.version
+            };
+            
+            PushService.newProject(formData, function(data){
+                $scope.output = data.message;
+                $scope.getAllProjects();
+            });
+        };
+
+        $scope.getAllProjects = function(){
+            PushService.getAllProjects(function(data){
+                $scope.projects = data.projects;
+            }); 
+        };
     }
 );
